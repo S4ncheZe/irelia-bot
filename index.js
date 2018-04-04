@@ -15,9 +15,13 @@ robot.on('message', message =>{
   if(message.content == "Денис"){
     message.reply("Люблю Дениса <3");
   }
+  if(message.content == "Протеин"){
+    message.reply(" Протеин + Лулу = CENSORED");
+  }
 
 })
 
 robot.on('ready', () => {
     console.log('I am ready!');
   });
+  

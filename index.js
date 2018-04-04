@@ -10,7 +10,14 @@ robot.on('guildMemberAdd', function(member) {
 
 });
 
+robot.on('message', message =>{
+      
+  if(message.content == "Денис"){
+    message.reply("Люблю Дениса <3");
+  }
+
+})
+
 robot.on('ready', () => {
     console.log('I am ready!');
   });
-  

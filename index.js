@@ -1,3 +1,5 @@
+
+
 var prefix = "!";
 var x = 0;
 
@@ -11,17 +13,34 @@ robot.on('guildMemberAdd', function(member) {
 
   member.addRole(member.guild.roles.find("name", "Ещё не определен"));
 
-});
+  
+         
+  
+})
 
 robot.on('message', message =>{
-      
-  if(message.content == "Что скажешь о Денисе?"){
-    message.channel.sendMessage("Люблю Дениса <3");
+
+  if(message.content == "!саня"){
+    message.channel.sendMessage("Карась");
   }
-  if(message.content == "Что скажешь о Протеине?"){
+
+  if(message.content == "!илья"){
+    message.channel.sendMessage("Не видела ни разу");
+  }
+    
+  if(message.content == "!оля"){
+    message.channel.sendMessage("Моя конкурентка :confused: ");
+  }
+
+  if(message.content == "!денис"){
+    message.channel.sendMessage("За Саню и двор, стреляю в упор");
+  }
+  if(message.content == "!протеин"){
     message.channel.sendMessage(" Протеин + Лулу = CENSORED");
   }
 
+
+  
 })
 
 robot.on('ready', () => {
@@ -33,21 +52,54 @@ robot.on('ready', () => {
 
 
     var words1 = ["Ясуо", "Шая", "Вел'Коз", "Зед", "Рэйкан", "Азир", "Акали", "Алистар", "Азир", "Акали", "Алистар", "Амуму", "Анивия", "Ари", "Атрокс", "Аурелион Сол", "Бард"];
-       
+       var monetr = ["Орёл", "Решка"];
         var rand1 = Math.floor(Math.random() * words1.length);
         var phrase = words1[rand1];
-        var p1, p2, p3, p4, p5;
+        var monet = Math.floor(Math.random() * monetr.length);
 
        if(message.content == prefix + "герой"){
          message.channel.sendMessage("Твой герой на эту игру: " + phrase);
-       }
 
-       while(x == 5){
-         if(message.content == "лес" || message.content == "топ" || message.content == "сап", "саппорт" || message.content == "адк" || message.content == "мид"){
-            p1 = message.author;
-            console.log(p1);
-         }
-       }
-     
-               
+         
+       }        
+
+       var randroll = Math.floor(Math.random() * 100);
+  
+  if(message.content == prefix + "roll"){
+    message.reply(" и твоё число...");
+    message.channel.sendMessage(randroll);
+  }
+
+
+  if(message.content == prefix + "monet"){
+    message.reply(" и выпадает...");
+    message.channel.sendMessage(monetr[monet]);
+  }
   })
+
+
+  robot.on('talking', message =>{
+     var dinner = ["Яишницу", "Курицу", "Брокколи", "Макароны", "Котлетки :)"];
+
+var randdin = Math.floor(Math.random() * dinner.length);
+
+     if(message.content == "Что ты предпочитаешь на обед?"){
+       message.channel.sendMessage(randdin);
+     }
+
+  })
+
+
+  robot.on('lolroles', message =>{
+    if(message.content == "сап"){
+      var user = message.author.username;
+    console.log(user);
+    roleChange();
+    }
+
+  })
+
+robot.on('roleChange', function(message){
+    
+    message.addRole(message.guild.roles.find(lolroles(user), "Саппорт"));
+})

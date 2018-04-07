@@ -20,6 +20,11 @@ robot.on('guildMemberAdd', function(member) {
 
 robot.on('message', message =>{
 
+  
+  if(message.content == "!улар"){
+    message.channel.sendMessage("СПАМЕР, ФИДЕР, ЛИВЕР! ");
+  }
+  
   if(message.content == "!саня"){
     message.channel.sendMessage("Карась");
   }

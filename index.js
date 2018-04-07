@@ -28,9 +28,6 @@ robot.on('message', message =>{
     message.channel.sendMessage("Не видела ни разу");
   }
     
-  if(message.content == "!оля"){
-    message.channel.sendMessage("Оля + Шая = CENSORED");
-  }
 
   if(message.content == "!денис"){
     message.channel.sendMessage("За Саню и двор, стреляю в упор");

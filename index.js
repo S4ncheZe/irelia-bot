@@ -29,7 +29,7 @@ robot.on('message', message =>{
   }
     
   if(message.content == "!оля"){
-    message.channel.sendMessage("Ну, как бы АДК ");
+    message.channel.sendMessage("Оля + Шая = CENSORED");
   }
 
   if(message.content == "!денис"){

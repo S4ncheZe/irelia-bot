@@ -79,29 +79,3 @@ robot.on('ready', () => {
   }
   })
 
-
-  robot.on('talking', message =>{
-     var dinner = ["Яишницу", "Курицу", "Брокколи", "Макароны", "Котлетки :)"];
-
-var randdin = Math.floor(Math.random() * dinner.length);
-
-     if(message.content == "Что ты предпочитаешь на обед?"){
-       message.channel.sendMessage(randdin);
-     }
-
-  })
-
-
-  robot.on('lolroles', message =>{
-    if(message.content == "сап"){
-      var user = message.author.username;
-    console.log(user);
-    roleChange();
-    }
-
-  })
-
-robot.on('roleChange', function(message){
-    
-    message.addRole(message.guild.roles.find(lolroles(user), "Саппорт"));
-})

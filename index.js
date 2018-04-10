@@ -20,11 +20,6 @@ robot.on('guildMemberAdd', function(member) {
 
 robot.on('message', message =>{
 
-  
-  if(message.content == "!улар"){
-    message.channel.sendMessage("СПАМЕР, ФИДЕР, ЛИВЕР! ");
-  }
-  
   if(message.content == "!саня"){
     message.channel.sendMessage("Карась");
   }
@@ -33,6 +28,9 @@ robot.on('message', message =>{
     message.channel.sendMessage("Не видела ни разу");
   }
     
+  if(message.content == "!улар"){
+    message.channel.sendMessage("СПАМЕР, ФИДЕР, ЛИВЕР! ");
+  }
 
   if(message.content == "!денис"){
     message.channel.sendMessage("За Саню и двор, стреляю в упор");
@@ -51,19 +49,32 @@ robot.on('ready', () => {
 
   robot.on('message', message =>{
     
-
-
+var nikita = ["Гнар", "Люкс", "Поппи", "Сона", "Тристана", "Раммус", "Мастер Йи", "Вейгар", "Сорака", "Нуну", "Корки", "Джин", "Энни", "Рамбл", "Рэйкан", "Экко", "Ноктюрн", "Ривен", "Эш", "Гарен", "Ургот", "Алистар", "Моргана", "Акали", "Джакс", "Зилеан", "Камилла", "Варвик", "Сивир", "Ле Блан", "Амуму", "Кейл", "Райз", "Твистед Фэйт", "Фиддлстикс"];
+var olya = ["Мисс Фортуна", "Шая", "Ари", "Эш", "Квинн", "Блицкранк", "Зиггс", "Насус", "Энни", "Варвик", "Дрейвен", "Люциан", "Поппи", "Сивир"];
+var deniswords = ["Ка'Зигс", "Рек'Сай", "Атрокс", "Клед", "Орн", "Ургот", "Каин", "Ког'Мао", "Джакс", "Аурелион Сол", "Шая", "Вел'Коз", "Киндред", "Скарнер", "Варвик", "Ирелия", "Джин", "Гарен", "Брэнд", "Чо'Гат", "Энни", "Эш"];
     var words1 = ["Ясуо", "Шая", "Вел'Коз", "Зед", "Рэйкан", "Азир", "Акали", "Алистар", "Азир", "Акали", "Алистар", "Амуму", "Анивия", "Ари", "Атрокс", "Аурелион Сол", "Бард"];
        var monetr = ["Орёл", "Решка"];
+       var protein = ["Амуму", "Гарен", "Джакс", "Жанна", "Зед", "Зиггс", "Кейл", "Корки", "Мастер Йи", "Нуну", "Поппи", "Райз", "Рэйкан", "Синджед", "Сона", "Сорака", "Триндамир", "Удир", "Физз", "Эш"];
+       var denisran = Math.floor(Math.random() * deniswords.length);
+       var proteinran = Math.floor(Math.random() * protein.length);
         var rand1 = Math.floor(Math.random() * words1.length);
         var phrase = words1[rand1];
+        var nikitaran = Math.floor(Math.random() * nikita.length);
         var monet = Math.floor(Math.random() * monetr.length);
+        var olyaran = Math.floor(Math.random() * olya.length);
 
-       if(message.content == prefix + "герой"){
-         message.channel.sendMessage("Твой герой на эту игру: " + phrase);
-
-         
-       }        
+       if(message.content == prefix + "hikari"){
+         message.channel.sendMessage("Твой герой на эту игру: " + olya[olyaran]);
+       }
+       if(message.content == prefix + "nikita"){
+         message.channel.sendMessage("Твой герой на эту игру: " + nikita[nikitaran]);
+       }
+       if(message.content == prefix + "denis"){
+         message.channel.sendMessage("Твой герой на эту игру: " + deniswords[denisran]); 
+       }       
+       if(message.content == prefix + "protein"){
+         message.channel.sendMessage("Твой герой на эту игру: " + protein[proteinran]);
+       } 
 
        var randroll = Math.floor(Math.random() * 100);
   
@@ -78,4 +89,3 @@ robot.on('ready', () => {
     message.channel.sendMessage(monetr[monet]);
   }
   })
-

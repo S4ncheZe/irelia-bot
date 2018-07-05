@@ -11,7 +11,7 @@ robot.on('guildMemberAdd', function(member) {
 
   member.guild.channels.find("name", "общение").sendMessage(member.toString() + ", привет. Сейчас твоя роль в игре не определена, свяжись с основателем канала, чтобы у тебя появилась роль)")
 
-  member.addRole(member.guild.roles.find("name", "Ещё не определен"));
+  member.addRole(member.guild.roles.find("name", "Изгои <3"));
 
   
          
@@ -20,24 +20,14 @@ robot.on('guildMemberAdd', function(member) {
 
 robot.on('message', message =>{
 
-  if(message.content == "!саня"){
-    message.channel.sendMessage("Карась");
-  }
-
   if(message.content == "!илья"){
     message.channel.sendMessage("Не видела ни разу");
-  }
-    
-  if(message.content == "!улар"){
-    message.channel.sendMessage("СПАМЕР, ФИДЕР, ЛИВЕР! ");
   }
 
   if(message.content == "!денис"){
     message.channel.sendMessage("За Саню и двор, стреляю в упор");
   }
-  if(message.content == "!протеин"){
-    message.channel.sendMessage(" Протеин + Лулу = CENSORED");
-  }
+ 
 
 
   
@@ -48,9 +38,6 @@ robot.on('ready', () => {
   });
 
   robot.on('message', message =>{
-var anton = ["Ясуо", "Тимо", "Джин", "Каин", "Зерат", "Тристана", "Сион", "Ренгар", "Талон", "Ари", "Кейтлин", "Джакс", "Шая", "Ривен", "Мастер Йи"];    
-var nikita = ["Зои", "Гнар", "Люкс", "Поппи", "Сона", "Тристана", "Раммус", "Мастер Йи", "Вейгар", "Сорака", "Нуну", "Корки", "Джин", "Энни", "Рамбл", "Рэйкан", "Экко", "Ноктюрн", "Ривен", "Эш", "Гарен", "Ургот", "Алистар", "Моргана", "Акали", "Джакс", "Зилеан", "Камилла", "Варвик", "Сивир", "Ле Блан", "Амуму", "Кейл", "Райз", "Твистед Фэйт", "Фиддлстикс"];
-var olya = ["Сорака", "Мисс Фортуна", "Шая", "Ари", "Эш", "Квинн", "Блицкранк", "Зиггс", "Насус", "Энни", "Варвик", "Дрейвен", "Люциан", "Поппи", "Сивир"];
 var deniswords = ["Камилла", "Твистед Фэйт", "Трэш", "Квинн", "Физз", "Ка'Зигс", "Рек'Сай", "Атрокс", "Клед", "Орн", "Ургот", "Каин", "Ког'Мао", "Джакс", "Аурелион Сол", "Шая", "Вел'Коз", "Киндред", "Скарнер", "Варвик", "Ирелия", "Джин", "Гарен", "Брэнд", "Чо'Гат", "Энни", "Эш"];
     var words1 = ["Ясуо", "Шая", "Вел'Коз", "Зед", "Рэйкан", "Азир", "Акали", "Алистар", "Азир", "Акали", "Алистар", "Амуму", "Анивия", "Ари", "Атрокс", "Аурелион Сол", "Бард"];
        var monetr = ["Орёл", "Решка"];
@@ -65,15 +52,6 @@ var deniswords = ["Камилла", "Твистед Фэйт", "Трэш", "Кв
     var ranant = Math.floor(Math.random() * anton.length);
 
     
-     if(message.content == prefix + "bukiii"){
-         message.channel.sendMessage("Твой герой на эту игру: " + anton[ranant]);
-       }
-       if(message.content == prefix + "hikari"){
-         message.channel.sendMessage("Твой герой на эту игру: " + olya[olyaran]);
-       }
-       if(message.content == prefix + "nikita"){
-         message.channel.sendMessage("Твой герой на эту игру: " + nikita[nikitaran]);
-       }
        if(message.content == prefix + "denis"){
          message.channel.sendMessage("Твой герой на эту игру: " + deniswords[denisran]); 
        }       

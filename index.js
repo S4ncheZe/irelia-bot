@@ -5,7 +5,7 @@ var x = 0;
 
 const Discord = require('discord.js');
 const robot = new Discord.Client();
-robot.login("NDMwNzkwMzY5ODQ0OTIwMzMw.DaVUaQ.svtc8maxYOOe7Wpgy2SFA00lrnc");
+robot.login("NDY0ODA1Njc5NjE0NTI1NDQx.DiETpA.43ICa8B07ATFZAZs4bgbz7L5yoI");
 
 robot.on('guildMemberAdd', function(member) {
 
@@ -20,9 +20,6 @@ robot.on('guildMemberAdd', function(member) {
 
 robot.on('message', message =>{
 
-  if(message.content == "!илья"){
-    message.channel.sendMessage("Не видела ни разу");
-  }
 
   if(message.content == "!денис"){
     message.channel.sendMessage("За Саню и двор, стреляю в упор");

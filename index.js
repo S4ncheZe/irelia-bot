@@ -5,7 +5,7 @@ var x = 0;
 
 const Discord = require('discord.js');
 const robot = new Discord.Client();
-robot.login("NDY0ODA1Njc5NjE0NTI1NDQx.DiETpA.43ICa8B07ATFZAZs4bgbz7L5yoI");
+robot.login("NNDY0ODA1Njc5NjE0NTI1NDQx.DiETpA.43ICa8B07ATFZAZs4bgbz7L5yoI");
 
 robot.on('guildMemberAdd', function(member) {
 
